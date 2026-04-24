@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-background text-white font-body;
+  }
+  
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-surface-card border border-white/10 backdrop-blur-md rounded-xl;
+  }
+  
+  .glow-on-hover {
+    @apply transition-all duration-300;
+  }
+  
+  .glow-on-hover:hover {
+    @apply shadow-[0_0_20px_rgba(37,99,235,0.2)] border-primary/30;
+  }
+
+  .gradient-text {
+    @apply bg-brand-gradient bg-clip-text text-transparent;
+  }
+
+  .bg-mesh {
+    background-image: radial-gradient(circle at 2px 2px, rgba(59, 130, 246, 0.05) 1px, transparent 0);
+    background-size: 40px 40px;
+  }
+
+  .pulse-node {
+    box-shadow: 0 0 10px theme('colors.primary.DEFAULT');
+  }
+
+  .hex-bg {
+    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 0l25.98 15v30L30 60 4.02 45V15z' fill-opacity='0.03' fill='%232563EB' fill-rule='evenodd' stroke='%232563EB' stroke-opacity='0.05' stroke-width='1'/%3E%3C/svg%3E");
+  }
+
+  .button-gradient {
+    background: linear-gradient(135deg, #2563EB 0%, #06B6D4 100%);
+  }
+}
