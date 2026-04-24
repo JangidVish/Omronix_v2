@@ -245,8 +245,77 @@ const Blockchain = () => {
       {/* BaaS Section */}
       <section className="py-12 md:py-24">
         <div className="container mx-auto px-6 max-w-7xl">
-          <h2 className="text-4xl font-heading font-bold text-center text-white mb-16">Deploy Without Managing Infrastructure</h2>
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-8">
+          <h2 className="text-3xl md:text-4xl font-heading font-bold text-center text-white mb-10 md:mb-16">Deploy Without Managing Infrastructure</h2>
+
+          <div className="space-y-4 md:hidden">
+            {[
+              { 
+                title: 'R3 Corda', 
+                desc: 'Optimized for regulated financial institutions and strictly permissioned peer-to-peer transactions.',
+                features: ['AML/KYC Built-in', 'High Privacy Logic', 'Legal Prosa Support'],
+                tag: 'Institutional',
+                tagColor: 'primary',
+                img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAHptauJeV6vM03zaFR0I_7sSasOxMclnkLn-9I4L6PzT1YeUGV7rjKFA4DMfSYPSxSx8_0QMm9s8hsK-gjB0k1RWO1e-kcVPWClM3wqZlqNVkDeP1iiY7bn6xkAjYK_xX0LmV78RDu5HSH9dNO2WxeujaFNh5SVJS_s_yn0l2dmbTgWr75lYv4orwyLD3Wj4lF8FDy_OIjz7YYQ3ArXBMOFiY1JPFCRhGDJyIodbZdz1Eg9-0o5Y7tgNn1nmPaGQyjf4BimpTgJg'
+              },
+              { 
+                title: 'Hedera Hashgraph', 
+                desc: 'Next-gen distributed ledger technology featuring high-speed consensus and sustainable operations.',
+                features: ['10,000+ TPS', 'Fixed Low Fees', 'Carbon Negative'],
+                tag: 'Most Popular',
+                tagColor: 'secondary',
+                img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAVYZWzEjt3vV4J7hLKOehWjYI371Pwgr3OdxT7wbV7x8edpiolSbqnkEC008YJdcm4xAt5oaiwrOCB3QSBHmyKiFy5SfnObf2BAwbN0K2iKXS_ipOpj6CjSWiKHWMbJAMpsniSqI7rOqysO0onUf29migMjpMRKCwzcwTrRn1Yr751txV5VSVruZixeqc9udUnet1q3u-zqVsjmYP0Bs3-COs1isXCK1wyKyVUM0Qi1PggJEOSVHT4biuL2LJWNfVqhhAg_j0cWg',
+                featured: true
+              },
+              { 
+                title: 'DAO Orchestrator', 
+                desc: 'Comprehensive toolset for launching and managing Decentralized Autonomous Organizations.',
+                features: ['On-Chain Voting', 'Treasury Multi-sig', 'Proposal Framework'],
+                tag: 'Community',
+                tagColor: 'primary',
+                img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDH7IweNqjpc13ikypHUmIvwG73X9iaUmbJ0KG_BsQucXgpmjkBA7ucjJvM5OAcRHdX4zp2UIIvvvGkUsizu37WExaBB96FN_Bb9j7ClnIwWaynudDunCK6WaIp5oxd6tX2d20W2tNA1N3O1r9NYjGrzg2lQB5akoBODsr2HGvnRCuiDNWdJknp6C1I469T2PW0Lt1cM2ZxJ7MWN_sQAJQ4vfp7Ox6bvfKfeq8gYUJGf5FUZ4nwhGQYxNxbfc5hC-_AY_QQxGAl3A'
+              },
+              { 
+                title: 'DAO Orchestrator', 
+                desc: 'Comprehensive toolset for launching and managing Decentralized Autonomous Organizations.',
+                features: ['On-Chain Voting', 'Treasury Multi-sig', 'Proposal Framework'],
+                tag: 'Community',
+                tagColor: 'primary',
+                img: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDH7IweNqjpc13ikypHUmIvwG73X9iaUmbJ0KG_BsQucXgpmjkBA7ucjJvM5OAcRHdX4zp2UIIvvvGkUsizu37WExaBB96FN_Bb9j7ClnIwWaynudDunCK6WaIp5oxd6tX2d20W2tNA1N3O1r9NYjGrzg2lQB5akoBODsr2HGvnRCuiDNWdJknp6C1I469T2PW0Lt1cM2ZxJ7MWN_sQAJQ4vfp7Ox6bvfKfeq8gYUJGf5FUZ4nwhGQYxNxbfc5hC-_AY_QQxGAl3A'
+              },
+            ].map((item, idx) => (
+              <details key={idx} className={`glass-card rounded-2xl overflow-hidden ${item.featured ? 'border-secondary/30' : ''}`}>
+                <summary className="list-none cursor-pointer p-5 flex items-center justify-between gap-4">
+                  <div className="flex items-center gap-4 min-w-0">
+                    <div className="w-14 h-14 rounded-xl bg-white/5 flex items-center justify-center flex-shrink-0">
+                      <img alt={item.title} className="w-9 h-9 grayscale brightness-200" src={item.img} />
+                    </div>
+                    <div className="min-w-0">
+                      <h3 className="text-lg font-heading font-bold text-white truncate">{item.title}</h3>
+                      <p className="text-xs text-white/50 truncate">{item.tag}</p>
+                    </div>
+                  </div>
+                  <span className={`text-[10px] font-bold text-${item.tagColor} px-3 py-1 bg-${item.tagColor}/10 rounded-full border border-${item.tagColor}/20 uppercase whitespace-nowrap`}>
+                    {item.tag}
+                  </span>
+                </summary>
+                <div className="px-5 pb-5 pt-1 border-t border-white/5">
+                  <p className="text-sm text-slate-400 mb-4 leading-relaxed">{item.desc}</p>
+                  <ul className="space-y-2 mb-5">
+                    {item.features.map((f) => (
+                      <li key={f} className="flex items-center gap-2 text-xs text-slate-300">
+                        <span className="material-symbols-outlined text-green-500 text-sm">check_circle</span> {f}
+                      </li>
+                    ))}
+                  </ul>
+                  <Button variant={item.featured ? 'primary' : 'secondary'} className="w-full">
+                    Select Platform
+                  </Button>
+                </div>
+              </details>
+            ))}
+          </div>
+
+          <div className="hidden md:grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-8">
             {[
               { 
                 title: 'R3 Corda', 
