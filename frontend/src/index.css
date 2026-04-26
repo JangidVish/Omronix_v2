@@ -4,75 +4,45 @@
 
 @layer base {
   body {
-    @apply bg-background text-white font-body;
+    @apply bg-background text-text-primary font-body antialiased;
+    background-image: radial-gradient(circle at 50% 50%, rgba(37,99,235,0.02) 0%, transparent 50%),
+                      radial-gradient(circle at 100% 0%, rgba(6,182,212,0.02) 0%, transparent 50%);
+    background-attachment: fixed;
   }
-  
+
   h1, h2, h3, h4, h5, h6 {
-    @apply font-heading;
+    @apply font-heading tracking-tight;
   }
 }
 
 @layer components {
-  .glass-card {
-    @apply bg-surface-card border border-white/10 backdrop-blur-md rounded-xl;
-  }
-  
-  .glow-on-hover {
-    @apply transition-all duration-300;
-  }
-  
-  .glow-on-hover:hover {
-    @apply shadow-[0_0_20px_rgba(37,99,235,0.2)] border-primary/30;
-  }
-
   .gradient-text {
     @apply bg-brand-gradient bg-clip-text text-transparent;
   }
 
-  .bg-mesh {
-    background-image: radial-gradient(circle at 2px 2px, rgba(59, 130, 246, 0.05) 1px, transparent 0);
-    background-size: 40px 40px;
+  .glass-card {
+    @apply bg-surface-card backdrop-blur-md border border-border shadow-soft;
   }
 
-  .pulse-node {
-    box-shadow: 0 0 10px theme('colors.primary.DEFAULT');
-  }
-
-  .hex-bg {
-    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 0l25.98 15v30L30 60 4.02 45V15z' fill-opacity='0.03' fill='%232563EB' fill-rule='evenodd' stroke='%232563EB' stroke-opacity='0.05' stroke-width='1'/%3E%3C/svg%3E");
+  .glow-on-hover {
+    @apply hover:shadow-[0_0_30px_rgba(37,99,235,0.1)] transition-shadow duration-300;
   }
 
   .button-gradient {
-    background: linear-gradient(135deg, #2563EB 0%, #06B6D4 100%);
+    @apply bg-brand-gradient hover:opacity-90 transition-opacity;
   }
-
-  .perspective-1000 {
-    perspective: 1000px;
+  
+  .hex-bg {
+    background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M30 0l25.98 15v30L30 60 4.02 45V15z' fill-rule='evenodd' stroke='%232563eb' stroke-width='0.5' fill='none' opacity='0.05'/%3E%3C/svg%3E");
   }
+}
 
-  @keyframes blob {
-    0% { transform: translate(0px, 0px) scale(1); }
-    33% { transform: translate(30px, -50px) scale(1.1); }
-    66% { transform: translate(-20px, 20px) scale(0.9); }
-    100% { transform: translate(0px, 0px) scale(1); }
-  }
-
-  .animate-blob {
-    animation: blob 7s infinite;
-  }
-
-  .animation-delay-2000 {
-    animation-delay: 2s;
-  }
-
-  /* Hide scrollbar for Chrome, Safari and Opera */
+@layer utilities {
   .no-scrollbar::-webkit-scrollbar {
     display: none;
   }
-
-  /* Hide scrollbar for IE, Edge and Firefox */
   .no-scrollbar {
-    -ms-overflow-style: none;  /* IE and Edge */
-    scrollbar-width: none;  /* Firefox */
+    -ms-overflow-style: none;
+    scrollbar-width: none;
   }
 }

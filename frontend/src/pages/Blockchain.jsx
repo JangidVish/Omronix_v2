@@ -27,9 +27,9 @@ const Blockchain = () => {
       />
 
       {/* Solutions Strip */}
-      <section className="py-12 md:py-16 bg-[#0A1628] border-y border-white/5">
+      <section className="py-12 md:py-16 bg-surface-dim border-y border-border/50">
         <div className="container mx-auto px-6 max-w-7xl">
-          <h2 className="text-3xl font-heading font-bold text-center text-white mb-12">End-to-End Blockchain Services</h2>
+          <h2 className="text-3xl font-heading font-bold text-center text-text-primary mb-12">End-to-End Blockchain Services</h2>
           <div className="grid grid-cols-2 md:grid-cols-5 gap-6">
             {[
               { icon: 'hub', title: 'Blockchain Dev', color: 'primary' },
@@ -42,7 +42,7 @@ const Blockchain = () => {
                 <div className={`w-12 h-12 mx-auto mb-4 rounded-xl bg-${item.color}/10 flex items-center justify-center text-${item.color} group-hover:bg-${item.color} group-hover:text-white transition-all`}>
                   <span className="material-symbols-outlined">{item.icon}</span>
                 </div>
-                <h3 className="font-semibold text-white mb-2 text-sm">{item.title}</h3>
+                <h3 className="font-semibold text-text-primary mb-2 text-sm">{item.title}</h3>
                 <span className="text-[10px] font-bold text-secondary px-2 py-0.5 bg-secondary/10 rounded uppercase">Available Now</span>
               </div>
             ))}
@@ -58,36 +58,36 @@ const Blockchain = () => {
             <div className="absolute top-0 left-0 w-48 md:w-64 h-32 md:h-48 glass-card rounded-2xl border-primary/30 p-4 md:p-6 -rotate-6 transform hover:scale-105 transition-transform">
               <div className="flex items-center gap-2 md:gap-3 mb-2 md:mb-4">
                 <span className="material-symbols-outlined text-primary text-sm md:text-base">public</span>
-                <span className="font-bold text-white text-xs md:text-base">Public</span>
+                <span className="font-bold text-text-primary text-xs md:text-base">Public</span>
               </div>
               <div className="h-1 bg-primary/20 rounded-full w-full mb-2">
                 <div className="h-full bg-primary rounded-full w-4/5"></div>
               </div>
-              <p className="text-[8px] md:text-[10px] text-slate-400">Permissionless, transparent network for global decentralization.</p>
+              <p className="text-[8px] md:text-[10px] text-text-secondary">Permissionless, transparent network for global decentralization.</p>
             </div>
             <div className="absolute top-1/4 left-1/4 w-48 md:w-64 h-32 md:h-48 glass-card rounded-2xl border-secondary/30 p-4 md:p-6 rotate-2 z-10 scale-110 shadow-2xl">
               <div className="flex items-center gap-2 md:gap-3 mb-2 md:mb-4">
                 <span className="material-symbols-outlined text-secondary text-sm md:text-base">vpn_lock</span>
-                <span className="font-bold text-white text-xs md:text-base">Private</span>
+                <span className="font-bold text-text-primary text-xs md:text-base">Private</span>
               </div>
               <div className="h-1 bg-secondary/20 rounded-full w-full mb-2">
                 <div className="h-full bg-secondary rounded-full w-3/5"></div>
               </div>
-              <p className="text-[8px] md:text-[10px] text-slate-400">High-performance permissioned systems for internal compliance.</p>
+              <p className="text-[8px] md:text-[10px] text-text-secondary">High-performance permissioned systems for internal compliance.</p>
             </div>
             <div className="absolute bottom-4 right-0 w-48 md:w-64 h-32 md:h-48 glass-card rounded-2xl border-primary/30 p-4 md:p-6 rotate-12 transform hover:scale-105 transition-transform">
               <div className="flex items-center gap-2 md:gap-3 mb-2 md:mb-4">
                 <span className="material-symbols-outlined text-primary text-sm md:text-base">groups</span>
-                <span className="font-bold text-white text-xs md:text-base">Consortium</span>
+                <span className="font-bold text-text-primary text-xs md:text-base">Consortium</span>
               </div>
               <div className="h-1 bg-primary/20 rounded-full w-full mb-2">
                 <div className="h-full bg-primary rounded-full w-2/5"></div>
               </div>
-              <p className="text-[8px] md:text-[10px] text-slate-400">Collaborative networks for multi-organizational governance.</p>
+              <p className="text-[8px] md:text-[10px] text-text-secondary">Collaborative networks for multi-organizational governance.</p>
             </div>
           </div>
           <div>
-            <h2 className="text-4xl font-heading font-bold text-white mb-8 leading-tight">Choose the Right Blockchain Architecture</h2>
+            <h2 className="text-4xl font-heading font-bold text-text-primary mb-8 leading-tight">Choose the Right Blockchain Architecture</h2>
             <div className="space-y-8">
               {[
                 { icon: 'lan', title: 'Public Blockchain', desc: 'Ideal for dApps and DeFi projects requiring maximum decentralization on networks like Ethereum or Solana.', color: 'primary' },
@@ -99,9 +99,9 @@ const Blockchain = () => {
                     <span className="material-symbols-outlined">{item.icon}</span>
                   </div>
                   <div>
-                    <h3 className="text-xl font-heading font-semibold text-white mb-2">{item.title}</h3>
-                    <p className="text-slate-400 leading-relaxed">{item.desc}</p>
-                    {idx < 2 && <div className="w-full h-[1px] bg-white/10 mt-6"></div>}
+                    <h3 className="text-xl font-heading font-semibold text-text-primary mb-2">{item.title}</h3>
+                    <p className="text-text-secondary leading-relaxed">{item.desc}</p>
+                    {idx < 2 && <div className="w-full h-[1px] bg-border mt-6"></div>}
                   </div>
                 </div>
               ))}
@@ -111,10 +111,10 @@ const Blockchain = () => {
       </section>
 
       {/* Tokenization Section */}
-      <section className="py-12 md:py-24 bg-[#0A1628]">
+      <section className="py-12 md:py-24 bg-surface-dim">
         <div className="container mx-auto px-6 max-w-7xl grid lg:grid-cols-2 gap-16 items-center">
           <div className="order-2 lg:order-1">
-            <h2 className="text-4xl font-heading font-bold text-white mb-8 leading-tight">Convert Real-World Assets into Digital Tokens</h2>
+            <h2 className="text-4xl font-heading font-bold text-text-primary mb-8 leading-tight">Convert Real-World Assets into Digital Tokens</h2>
             <div className="space-y-4">
               {[
                 { icon: 'token', title: 'NFT Development', desc: 'Fractionalized ownership of real estate, art, and intellectual property.', color: 'secondary' },
@@ -126,8 +126,8 @@ const Blockchain = () => {
                     <span className="material-symbols-outlined">{item.icon}</span>
                   </div>
                   <div>
-                    <h4 className="text-white font-bold mb-1">{item.title}</h4>
-                    <p className="text-sm text-slate-400">{item.desc}</p>
+                    <h4 className="text-text-primary font-bold mb-1">{item.title}</h4>
+                    <p className="text-sm text-text-secondary">{item.desc}</p>
                   </div>
                 </Card>
               ))}
@@ -186,8 +186,8 @@ const Blockchain = () => {
             </div>
           </div>
           <div>
-            <h2 className="text-4xl font-heading font-bold text-white mb-6 leading-tight">Secure, Audited, Production-Ready Contracts</h2>
-            <p className="text-lg text-slate-400 mb-10">Our Solidity experts build bug-free, optimized smart contracts that handle billions in transaction volume with military-grade security.</p>
+            <h2 className="text-4xl font-heading font-bold text-text-primary mb-6 leading-tight">Secure, Audited, Production-Ready Contracts</h2>
+            <p className="text-lg text-text-secondary mb-10">Our Solidity experts build bug-free, optimized smart contracts that handle billions in transaction volume with military-grade security.</p>
             <div className="space-y-6">
               {[
                 { icon: 'verified', title: 'Formal Verification', desc: 'Mathematical proving of contract logic to eliminate re-entrancy and overflow bugs.' },
@@ -197,15 +197,15 @@ const Blockchain = () => {
                 <div key={idx} className="flex gap-4">
                   <span className="material-symbols-outlined text-primary">{item.icon}</span>
                   <div>
-                    <h4 className="text-white font-bold">{item.title}</h4>
-                    <p className="text-sm text-slate-400">{item.desc}</p>
+                    <h4 className="text-text-primary font-bold">{item.title}</h4>
+                    <p className="text-sm text-text-secondary">{item.desc}</p>
                   </div>
                 </div>
               ))}
             </div>
             <div className="mt-8 flex flex-wrap gap-2">
               {['DeFi', 'Insurance', 'Governance', 'Supply Chain'].map((tag) => (
-                <span key={tag} className="text-[10px] font-bold border border-white/10 px-3 py-1 rounded bg-white/5 text-slate-400">
+                <span key={tag} className="text-[10px] font-bold border border-border px-3 py-1 rounded bg-surface-dim text-text-muted">
                   {tag}
                 </span>
               ))}
@@ -215,10 +215,10 @@ const Blockchain = () => {
       </section>
 
       {/* Enterprise Section */}
-      <section className="py-12 md:py-24 bg-[#0A1628]">
+      <section className="py-12 md:py-24 bg-surface-dim">
         <div className="container mx-auto px-6 max-w-7xl grid lg:grid-cols-2 gap-16 items-center">
           <div className="order-2 lg:order-1">
-            <h2 className="text-4xl font-heading font-bold text-white mb-6 leading-tight">Blockchain for Enterprise Operations</h2>
+            <h2 className="text-4xl font-heading font-bold text-text-primary mb-6 leading-tight">Blockchain for Enterprise Operations</h2>
             <div className="grid grid-cols-2 gap-4 md:gap-6">
               {[
                 { title: 'Strategy Consulting', desc: 'Roadmap development and feasibility studies for Fortune 500 integration.', color: 'primary' },
@@ -227,8 +227,8 @@ const Blockchain = () => {
                 { title: 'Consensus Tuning', desc: 'Custom algorithms (PoA, IBFT) optimized for corporate environmental targets.', color: 'primary' },
               ].map((item, idx) => (
                 <div key={idx} className={`p-6 glass-card rounded-2xl border-l-4 border-${item.color}`}>
-                  <h4 className="font-bold text-white mb-2">{item.title}</h4>
-                  <p className="text-sm text-slate-400">{item.desc}</p>
+                  <h4 className="font-bold text-text-primary mb-2">{item.title}</h4>
+                  <p className="text-sm text-text-secondary">{item.desc}</p>
                 </div>
               ))}
             </div>
@@ -246,7 +246,7 @@ const Blockchain = () => {
       {/* BaaS Section */}
       <section className="py-12 md:py-24">
         <div className="container mx-auto px-6 max-w-7xl">
-          <h2 className="text-3xl md:text-4xl font-heading font-bold text-center text-white mb-10 md:mb-16">Deploy Without Managing Infrastructure</h2>
+          <h2 className="text-3xl md:text-4xl font-heading font-bold text-center text-text-primary mb-10 md:mb-16">Deploy Without Managing Infrastructure</h2>
 
           <div className="space-y-4 md:hidden">
             {[
@@ -291,8 +291,8 @@ const Blockchain = () => {
                       <img alt={item.title} className="w-9 h-9 grayscale brightness-200" src={item.img} />
                     </div>
                     <div className="min-w-0">
-                      <h3 className="text-lg font-heading font-bold text-white truncate">{item.title}</h3>
-                      <p className="text-xs text-white/50 truncate">{item.tag}</p>
+                      <h3 className="text-lg font-heading font-bold text-text-primary truncate">{item.title}</h3>
+                      <p className="text-xs text-text-secondary truncate">{item.tag}</p>
                     </div>
                   </div>
                   <span className={`text-[10px] font-bold text-${item.tagColor} px-3 py-1 bg-${item.tagColor}/10 rounded-full border border-${item.tagColor}/20 uppercase whitespace-nowrap`}>
@@ -358,8 +358,8 @@ const Blockchain = () => {
                     {item.tag}
                   </span>
                 </div>
-                <h3 className="text-2xl font-heading font-bold text-white mb-4">{item.title}</h3>
-                <p className="text-sm text-slate-400 mb-6">{item.desc}</p>
+                <h3 className="text-2xl font-heading font-bold text-text-primary mb-4">{item.title}</h3>
+                <p className="text-sm text-text-secondary mb-6">{item.desc}</p>
                 <ul className="space-y-3 mb-8">
                   {item.features.map((f) => (
                     <li key={f} className="flex items-center gap-2 text-xs text-slate-300">
@@ -382,9 +382,9 @@ const Blockchain = () => {
       </section>
 
       {/* Logo Grid */}
-      <section className="py-12 md:py-20 bg-[#0A1628] border-t border-white/5">
+      <section className="py-12 md:py-20 bg-surface-dim border-t border-border/50">
         <div className="container mx-auto px-6 max-w-7xl text-center">
-          <h2 className="text-xl md:text-3xl font-heading font-bold text-white mb-8 md:mb-12 uppercase tracking-widest opacity-50">Ecosystem Foundations</h2>
+          <h2 className="text-xl md:text-3xl font-heading font-bold text-text-primary mb-8 md:mb-12 uppercase tracking-widest opacity-50">Ecosystem Foundations</h2>
           <div className="flex overflow-x-auto gap-4 md:gap-8 pb-4 no-scrollbar justify-start md:justify-center">
             {[
               { name: 'Ethereum', color: 'bg-blue-500' },
@@ -394,7 +394,7 @@ const Blockchain = () => {
               { name: 'Binance', color: 'bg-yellow-500' },
               { name: 'Avalanche', color: 'bg-red-500' },
             ].map((tech) => (
-              <span key={tech.name} className="px-4 md:px-6 py-2 md:py-3 glass-card rounded-full font-bold text-white flex items-center gap-2 whitespace-nowrap text-xs md:text-base">
+              <span key={tech.name} className="px-4 md:px-6 py-2 md:py-3 glass-card rounded-full font-bold text-text-primary flex items-center gap-2 whitespace-nowrap text-xs md:text-base">
                 <span className={`w-2 h-2 md:w-4 md:h-4 rounded-full ${tech.color}`}></span> {tech.name}
               </span>
             ))}
@@ -410,7 +410,7 @@ const Blockchain = () => {
           <p className="text-xl text-white/80 mb-10 max-w-2xl mx-auto">Join the future of trustless infrastructure. Start your blockchain journey with Omronix today.</p>
           <div className="flex flex-col sm:flex-row justify-center gap-4">
             <Link to="/contact">
-              <Button size="lg" className="bg-white text-primary-container hover:bg-white/90 w-full sm:w-auto">Get Free Consultation</Button>
+              <Button variant="secondary" size="lg" className="bg-white/90 text-primary hover:bg-white/70 w-full sm:w-auto">Get Free Consultation</Button>
             </Link>
             <Link to="/contact">
               <Button variant="secondary" size="lg" className="border-white/30 text-white hover:bg-white/10 w-full sm:w-auto">Developer Dashboard</Button>

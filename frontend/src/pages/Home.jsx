@@ -4,6 +4,7 @@ import Hero from '../components/shared/Hero';
 import Section, { SectionHeader } from '../components/shared/Section';
 import Card, { CardContent } from '../components/ui/Card';
 import Button from '../components/ui/Button';
+import homeHero from '../assets/home-hero.png';
 
 const Home = () => {
   return (
@@ -20,7 +21,7 @@ const Home = () => {
           { label: 'Messages', value: '10M+' },
           { label: 'Enterprise', value: 'Ready' }
         ]}
-        imageSrc="https://lh3.googleusercontent.com/aida-public/AB6AXuCPYsKazAsnZJrtyxckwMqt8FOoEer7thOYkY62gylnRKvb4jV06MKIZ7VYTlKJfXTfa_6YXV2tzCZlHV-x2LcriGkvuCCysVPJEVEMPL96jwjUiURMiaBmHK6uMbLqlQ7D9B0lC0S4Y0z9H9514J-KsQWOdrSr8AkjGq6XD19bq_UH3HQ9xQND8C660fATjuAKPYxygp9KZ_o3wRr1uWyv1Gk0e0jYjak3eeHSVfMfz1seTO-qjT7GoIV0vwgGEiYBzST9YP6y5w"
+        imageSrc={homeHero}
       />
 
       {/* About Section */}
@@ -53,21 +54,21 @@ const Home = () => {
                     <svg className="w-4 h-4 md:w-5 md:h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M5 13l4 4L19 7" /></svg>
                   </div>
                   <div>
-                    <h4 className="font-heading font-bold text-white text-xs md:text-base">{item.title}</h4>
-                    <p className="text-white/40 text-[10px] md:text-sm">{item.desc}</p>
+                    <h4 className="font-heading font-bold text-text-primary text-xs md:text-base">{item.title}</h4>
+                    <p className="text-text-secondary text-[10px] md:text-sm">{item.desc}</p>
                   </div>
                 </div>
               ))}
             </div>
             <Link to="/contact">
-              <Button variant="secondary">READ MORE</Button>
+              <Button variant="primary">READ MORE</Button>
             </Link>
           </div>
         </div>
       </Section>
 
       {/* Why Choose Us */}
-      <Section className="py-12 md:py-24">
+      <Section className="py-10 md:py-22">
         <SectionHeader 
           align="center"
           title="Unmatched Enterprise Infrastructure"
@@ -88,7 +89,7 @@ const Home = () => {
             { 
               title: 'Deep Customization', 
               desc: 'Your business is unique. We provide granular control over messaging logic, routing preferences, and data residency.',
-              color: 'text-tertiary'
+              color: 'text-secondary'
             },
             { 
               title: 'Technical Expertise', 
@@ -97,18 +98,18 @@ const Home = () => {
             }
           ].map((feature, idx) => (
             <Card key={idx} className="p-4 md:p-8 group hover:translate-y-[-4px]">
-              <div className={`w-10 h-10 md:w-12 md:h-12 rounded-xl bg-white/5 flex items-center justify-center mb-4 md:mb-6 ${feature.color}`}>
+              <div className={`w-10 h-10 md:w-12 md:h-12 rounded-xl bg-surface-dim flex items-center justify-center mb-4 md:mb-6 ${feature.color}`}>
                 <svg className="w-5 h-5 md:w-6 md:h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 10V3L4 14h7v7l9-11h-7z" /></svg>
               </div>
-              <h3 className="text-lg md:text-2xl font-heading font-bold mb-2 md:mb-3">{feature.title}</h3>
-              <p className="text-white/60 text-xs md:text-base leading-relaxed">{feature.desc}</p>
+              <h3 className="text-lg md:text-2xl font-heading text-primary font-bold mb-2 md:mb-3">{feature.title}</h3>
+              <p className="text-text-secondary text-xs md:text-base leading-relaxed">{feature.desc}</p>
             </Card>
           ))}
         </div>
       </Section>
 
       {/* Services Section */}
-      <Section variant="alt" className="py-12 md:py-24">
+      <Section variant="alt" className="py-8 md:py-20">
         <SectionHeader 
           title="Our Service Ecosystem"
           description="Core pillars of the Omronix technology stack."
@@ -131,15 +132,15 @@ const Home = () => {
               title: 'Agentic AI', 
               desc: 'Next-gen autonomous agents that handle complex customer interactions and network optimizations with human-like precision.',
               icon: 'robot_2',
-              color: 'from-tertiary to-tertiary-container'
+              color: 'from-accent-blue to-accent-cyan'
             }
           ].map((service, idx) => (
             <Card key={idx} className="p-4 md:p-8 flex flex-col h-full group">
               <div className={`w-10 h-10 md:w-14 md:h-14 rounded-xl md:rounded-2xl bg-gradient-to-br ${service.color} flex items-center justify-center mb-4 md:mb-8 shadow-lg`}>
                 <svg className="w-6 h-6 md:w-8 md:h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" /></svg>
               </div>
-              <h3 className="text-lg md:text-2xl font-heading font-bold mb-2 md:mb-4">{service.title}</h3>
-              <p className="text-white/50 text-xs md:text-base mb-4 md:mb-8 flex-grow">{service.desc}</p>
+              <h3 className="text-lg md:text-2xl text-primary font-bold mb-2 md:mb-4">{service.title}</h3>
+              <p className="text-text-secondary text-xs md:text-base mb-4 md:mb-8 flex-grow">{service.desc}</p>
               <Link to="/contact" className="text-primary text-xs md:text-base font-bold inline-flex items-center group-hover:gap-3 transition-all">
                 Learn More 
                 <svg className="w-4 h-4 md:w-5 md:h-5 ml-1 md:ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M17 8l4 4m0 0l-4 4m4-4H3" /></svg>

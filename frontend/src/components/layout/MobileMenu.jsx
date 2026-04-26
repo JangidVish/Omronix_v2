@@ -42,26 +42,26 @@ const MobileMenu = ({ isOpen, onClose }) => {
       <button
         type="button"
         onClick={onClose}
-        className={`absolute inset-0 w-full h-full bg-background/80 backdrop-blur-sm transition-opacity duration-300 ${
+        className={`absolute inset-0 w-full h-full bg-text-primary/10 backdrop-blur-sm transition-opacity duration-300 ${
           isOpen ? 'opacity-100' : 'opacity-0'
         }`}
         aria-label="Close mobile menu overlay"
       />
 
       <aside
-        className={`absolute top-0 right-0 h-full w-[86%] max-w-sm bg-surface-card border-l border-white/10 shadow-2xl transition-transform duration-300 ease-out ${
+        className={`absolute top-0 right-0 h-full w-[86%] max-w-sm bg-background border-l border-border shadow-2xl transition-transform duration-300 ease-out ${
           isOpen ? 'translate-x-0' : 'translate-x-full'
         }`}
         aria-label="Mobile navigation"
       >
-        <div className="h-20 px-6 border-b border-white/5 flex items-center justify-between">
-          <Link to="/" onClick={onClose} className="font-heading font-bold text-xl tracking-tight">
+        <div className="h-20 px-6 border-b border-border flex items-center justify-between">
+          <Link to="/" onClick={onClose} className="font-heading font-bold text-xl tracking-tight text-text-primary">
             OMRONIX
           </Link>
           <button
             type="button"
             onClick={onClose}
-            className="w-10 h-10 rounded-lg bg-white/5 flex items-center justify-center text-white/70 hover:text-white transition-colors"
+            className="w-10 h-10 rounded-lg bg-surface-dim flex items-center justify-center text-text-secondary hover:text-text-primary transition-colors"
             aria-label="Close menu"
           >
             <X size={22} />
@@ -77,8 +77,8 @@ const MobileMenu = ({ isOpen, onClose }) => {
               className={({ isActive }) =>
                 `px-4 py-3 rounded-xl font-heading font-bold text-lg transition-colors ${
                   isActive
-                    ? 'bg-primary/20 text-white border border-primary/30'
-                    : 'bg-white/0 text-white/70 hover:bg-white/5 hover:text-white border border-transparent'
+                    ? 'bg-primary/10 text-primary border border-primary/20'
+                    : 'bg-transparent text-text-secondary hover:bg-surface-dim hover:text-text-primary border border-transparent'
                 }`
               }
             >

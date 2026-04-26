@@ -2,7 +2,7 @@ import React from 'react';
 
 const Button = ({ 
   children, 
-  variant = 'primary', 
+  variant = 'secondary', 
   size = 'md', 
   className = '', 
   ...props 
@@ -11,7 +11,7 @@ const Button = ({
   
   const variants = {
     primary: "bg-brand-gradient text-white shadow-[0_0_15px_rgba(37,99,235,0.3)] hover:shadow-[0_0_25px_rgba(37,99,235,0.5)] rounded-full",
-    secondary: "bg-white/5 border border-white/10 text-white hover:bg-white/10 hover:border-primary/50 rounded-full",
+    secondary: "bg-black/5 border border-white/10 text-black hover:bg-white/10 hover:border-primary/50 rounded-full",
     outline: "bg-transparent border-2 border-primary text-primary hover:bg-primary/10 rounded-full",
     ghost: "bg-transparent text-white/70 hover:text-white hover:bg-white/5 rounded-lg",
   };

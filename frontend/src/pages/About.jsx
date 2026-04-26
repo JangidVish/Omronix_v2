@@ -29,7 +29,7 @@ const About = () => {
   return (
     <div>
       {/* Hero Section */}
-      <Hero 
+      <Hero
         badge="OUR STORY"
         title="Building the Future of Trusted Communication"
         description="Omronix is architecting the next generation of secure, decentralized communication protocols for enterprise-grade applications and sovereign digital identities."
@@ -51,8 +51,8 @@ const About = () => {
               <span className="material-symbols-outlined">target</span>
             </div>
             <span className="text-secondary font-heading font-bold text-xs tracking-widest block mb-2 uppercase">OUR MISSION</span>
-            <h2 className="text-3xl font-heading font-bold mb-4">Simplifying Complex Communications</h2>
-            <p className="text-white/40 leading-relaxed">
+            <h2 className="text-3xl font-heading font-bold text-text-primary mb-4">Simplifying Complex Communications</h2>
+            <p className="text-text-secondary leading-relaxed">
               We aim to demystify secure communication architectures, providing enterprises with the tools to build trustless, verifiable messaging systems without sacrificing performance or scalability.
             </p>
           </Card>
@@ -61,8 +61,8 @@ const About = () => {
               <span className="material-symbols-outlined">visibility</span>
             </div>
             <span className="text-secondary font-heading font-bold text-xs tracking-widest block mb-2 uppercase">OUR VISION</span>
-            <h2 className="text-3xl font-heading font-bold mb-4">Most Trusted Digital Partner</h2>
-            <p className="text-white/40 leading-relaxed">
+            <h2 className="text-3xl font-heading font-bold text-text-primary mb-4">Most Trusted Digital Partner</h2>
+            <p className="text-text-secondary leading-relaxed">
               To become the global standard for secure data exchange, where privacy is the default and security is a mathematical certainty for every organization on the planet.
             </p>
           </Card>
@@ -75,7 +75,7 @@ const About = () => {
         <div className="relative">
           {/* Vertical Line */}
           <div className="absolute left-4 md:left-1/2 -translate-x-1/2 h-full w-[1px] bg-gradient-to-b from-primary via-secondary to-transparent opacity-20"></div>
-          
+
           <div className="space-y-12 md:space-y-16">
             {milestones.map((m, idx) => (
               <div key={idx} className={`flex flex-col md:flex-row items-start md:items-center w-full ${m.side === 'left' ? 'md:justify-start' : 'md:justify-end'}`}>
@@ -83,8 +83,8 @@ const About = () => {
                   <Card className="p-6 md:p-8 inline-block max-w-md hover:border-primary/40 relative">
                     <div className="md:hidden absolute -left-10 top-1/2 -translate-y-1/2 w-4 h-4 rounded-full bg-primary border-4 border-background z-10"></div>
                     <span className="text-primary font-heading font-bold text-xs md:text-sm block mb-1 tracking-widest">{m.year}</span>
-                    <h3 className="text-xl md:text-2xl font-heading font-bold mb-2 md:mb-3">{m.title}</h3>
-                    <p className="text-white/40 text-xs md:text-sm leading-relaxed">{m.desc}</p>
+                    <h3 className="text-xl md:text-2xl font-heading font-bold text-text-primary mb-2 md:mb-3">{m.title}</h3>
+                    <p className="text-text-secondary text-xs md:text-sm leading-relaxed">{m.desc}</p>
                   </Card>
                 </div>
                 <div className="w-4 h-4 rounded-full bg-primary absolute left-1/2 -translate-x-1/2 hidden md:block border-4 border-background z-10 shadow-[0_0_10px_rgba(37,99,235,0.5)]"></div>
@@ -103,8 +103,8 @@ const About = () => {
               <div className="w-20 h-20 rounded-full bg-white/5 flex items-center justify-center mx-auto mb-6 group-hover:bg-primary/20 transition-all border border-white/5 group-hover:border-primary/30 shadow-2xl">
                 <span className="material-symbols-outlined text-primary text-4xl group-hover:scale-110 transition-transform">{v.icon}</span>
               </div>
-              <h3 className="text-xl font-heading font-bold mb-2">{v.title}</h3>
-              <p className="text-white/40 text-sm leading-relaxed px-4">{v.desc}</p>
+              <h3 className="text-xl font-heading font-bold text-text-primary mb-2">{v.title}</h3>
+              <p className="text-text-secondary text-sm leading-relaxed px-4">{v.desc}</p>
             </div>
           ))}
         </div>
@@ -112,24 +112,44 @@ const About = () => {
 
       {/* CTA Section */}
       <Section className="px-6">
-        <Card className="max-w-6xl mx-auto p-12 md:p-24 text-center relative overflow-hidden bg-gradient-to-br from-[#0A1628] to-[#0F1E35] border-primary/20">
-          <div className="absolute -top-20 -right-20 w-80 h-80 bg-secondary/10 blur-[100px] rounded-full"></div>
-          <div className="absolute -bottom-20 -left-20 w-80 h-80 bg-primary/10 blur-[100px] rounded-full"></div>
+        <Card className="max-w-6xl mx-auto p-12 md:p-24 text-center relative overflow-hidden 
+  bg-brand-gradient rounded-[2.5rem] shadow-2xl border-0">
+
+          {/* Glow effects */}
+          <div className="absolute top-0 right-0 w-96 h-96 bg-white/20 blur-[120px] rounded-full -translate-y-1/2 translate-x-1/2"></div>
+          <div className="absolute bottom-0 left-0 w-80 h-80 bg-cyan-300/20 blur-[100px] rounded-full translate-y-1/2 -translate-x-1/2"></div>
+
           <div className="relative z-10 space-y-8">
+
             <h2 className="text-4xl md:text-6xl font-heading font-bold text-white leading-tight">
               Ready to Transform Your Communication?
             </h2>
-            <p className="text-white/40 text-xl max-w-2xl mx-auto">
+
+            <p className="text-white/80 text-xl max-w-2xl mx-auto">
               Join the waitlist for our institutional pilot program and secure your spot in the future of trusted data exchange.
             </p>
+
             <div className="flex flex-wrap justify-center gap-4 pt-4">
               <Link to="/contact">
-                <Button size="lg">Get Started Now</Button>
+                <Button
+                  size="lg"
+                  className="bg-white text-primary px-10 hover:bg-white/90 transition"
+                >
+                  Get Started Now
+                </Button>
               </Link>
+
               <Link to="/contact">
-                <Button variant="secondary" size="lg">Schedule a Demo</Button>
+                <Button
+                  variant="secondary"
+                  size="lg"
+                  className="border border-white text-white px-10 hover:bg-white/10 transition"
+                >
+                  Schedule a Demo
+                </Button>
               </Link>
             </div>
+
           </div>
         </Card>
       </Section>
