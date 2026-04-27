@@ -28,11 +28,11 @@ const Home = () => {
       <Section variant="alt" className="py-12 md:py-24">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
           <div className="order-2 lg:order-1">
-            <Card blur="lg" className="p-2 group overflow-hidden">
+            <Card blur="lg" className="p-2 group overflow-hidden h-full">
               <img 
                 src="https://lh3.googleusercontent.com/aida-public/AB6AXuC4yluZTj9EZMuOGeNAHbDeeZIqe-SAt97mIrQcedpCV53fwCylcfg_8SwJMEVuwy2IUmeOkNGfWtPqe_gAssp07TO1H11hUls5L0tGDfqeAM-_G8eC9gJ_aLUezD9bIjbcbkaBcUC7NMPCGd-7chic4vi9wpfllDlGZ_78pgEWC2awNB8mQuRYAkZfhdaE6cSVvXBfPq_ZcwVbCCqY_8LR_2qc28y6kVPEirTLyuihHNrm9OwZxA9ELDSKJoDpfnXbzYhJImiLfw" 
                 alt="Network Infrastructure" 
-                className="rounded-xl group-hover:scale-105 transition-transform duration-700"
+                className="w-full h-full object-cover rounded-xl group-hover:scale-105 transition-transform duration-700"
               />
             </Card>
           </div>
