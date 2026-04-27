@@ -4,7 +4,7 @@ import Hero from '../components/shared/Hero';
 import Section, { SectionHeader } from '../components/shared/Section';
 import Card from '../components/ui/Card';
 import Button from '../components/ui/Button';
-import agenticAiHero from '../assets/agentic-ai-hero.png';
+import agenticAiHero from '../assets/agentic-ai-hero.webp';
 
 const AgenticAI = () => {
   const [activeTab, setActiveTab] = useState('Customer Service');

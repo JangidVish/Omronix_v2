@@ -4,7 +4,7 @@ import Hero from '../components/shared/Hero';
 import Section, { SectionHeader } from '../components/shared/Section';
 import Card, { CardContent } from '../components/ui/Card';
 import Button from '../components/ui/Button';
-import homeHero from '../assets/home-hero.png';
+import homeHero from '../assets/home-hero.webp';
 
 const Home = () => {
   return (
